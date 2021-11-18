@@ -8,10 +8,10 @@ Remove Image:
 # docker rmi <container_id>
 
 Interactive Mode:
-# docker run -it aamirpinger/helloworld:lastest sh
+# docker run -it alihasanahmedkhan/helloworld:lastest sh
 
 Detach Mode:
-# docker run -d aamirpinger/helloworld:lastest
+# docker run -d alihasanahmedkhan/helloworld:lastest
 
 List Containers:
 # docker ps -a
@@ -34,10 +34,11 @@ Publishing port (For browser)
                               \/
                          External Port
                             (HOST)
-                            
+Rename the Image:
+# docker image tag <old_image_name or id> <new_name_of_image>                           
                             
 Custom Container's name:
-# docker container run -d --name docker_app -p 5020:80 aamirpinger/helloworld:latest
+# docker container run -d --name docker_app -p 5020:80 alihasanahmedkhan/helloworld:latest
 
 Build Dockerfile:
 # docker build -t <custom_name> .
@@ -48,6 +49,8 @@ Run that docker image:
 Pushing Image to DockerHub:
 # docker image push <image_name or image_id>
 			OR
+First change the name of the image
+# docker image tag <old_tag> <docker_hub_account_name>/<old_tag>
 # docker image push <username>/<image_name>
 
 Make copy of existing image with different name:
